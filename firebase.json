@@ -1,16 +1,8 @@
 {
   "hosting": {
+    "site": "invade-fc9a6-a877b",
+
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    ...
   }
 }
