@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invade las Calles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>INVADE LAS CALLES</h1>
+        <p>Sistema de Gestión de Informes Multimedia</p>
+      </div>
+      <button class="btn" id="newReportBtn">+ Nuevo Informe</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar informes, etiquetas o descripciones...">
+      <select>
+        <option>Todas las Categorías</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="gallery" id="reportGallery">
+    <!-- Tarjetas serán agregadas dinámicamente -->
+  </main>
+
+  <!-- Modal Formulario -->
+  <div class="modal" id="reportModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Create New Report</h2>
+      <form id="reportForm">
+        <label>Report Title *</label>
+        <input type="text" id="title" required placeholder="Enter a descriptive title for your report">
+
+        <label>Detailed Description *</label>
+        <textarea id="description" required placeholder="Provide a comprehensive description of the incident or findings"></textarea>
+
+        <div class="row">
+          <div>
+            <label>Report Date</label>
+            <input type="date" id="date" required>
+          </div>
+          <div>
+            <label>Event Type *</label>
+            <select id="category" required>
+              <option value="">Select a category</option>
+              <option value="Seguridad">Seguridad</option>
+              <option value="Técnico">Técnico</option>
+              <option value="Calidad">Calidad</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Tags (Optional)</label>
+        <input type="text" id="tags" placeholder="Add tags to categorize your report">
+
+        <label>Media Upload</label>
+        <input type="file" id="media" multiple accept="image/*,video/*">
+
+        <div class="form-buttons">
+          <button type="submit" class="btn">Create Report</button>
+          <button type="button" class="btn cancel" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
