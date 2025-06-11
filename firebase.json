@@ -1,8 +1,20 @@
 {
   "hosting": {
     "site": "invade-fc9a6-a877b",
-
     "public": "public",
-    ...
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "dataconnect": {
+      "dataDir": "dataconnect/.dataconnect/pgliteData"
+    }
+  },
+  "dataconnect": {
+    "source": "dataconnect"
   }
 }
