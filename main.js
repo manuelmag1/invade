@@ -101,3 +101,25 @@ window.deleteCard = function (btn) {
   const card = btn.closest('.card');
   gallery.removeChild(card);
 };
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC8FZ-8ECCU_3yLKjD_aLNNMEa-3jMMh6w",
+  authDomain: "invade-fc9a6.firebaseapp.com",
+  projectId: "invade-fc9a6",
+  storageBucket: "invade-fc9a6.firebasestorage.app",
+  messagingSenderId: "612828253629",
+  appId: "1:612828253629:web:176423fc7dd8443f9a16d4",
+  measurementId: "G-VTN001SQGP"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
